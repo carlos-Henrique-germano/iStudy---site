@@ -28,32 +28,32 @@
                 <a href="#" class="navbar-brand">
                     <img src="imagens/logo.png" width="80">
                 </a>
-                <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+                <button class="navbar-toggler" onclick="toggleSidebar()">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="nav-principal">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="" class="nav-link">Home</a>
+                            <a href="dashboard.html" class="nav-link">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">Disciplinas</a>
+                            <a href="disciplinas.html" class="nav-link">Disciplinas</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">Planejamento</a>
+                            <a href="planejamento.html" class="nav-link">Planejamento</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">Revisões</a>
+                            <a href="revisoes.html" class="nav-link">Revisões</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">Histórico</a>
+                            <a href="historico.html" class="nav-link">Histórico</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">Estatísticas</a>
+                            <a href="estatisticas.html" class="nav-link">Estatísticas</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="btn btn-outline-light ml-4">Login</a>
+                            <a href="login.html" class="btn btn-outline-light ml-4">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -82,7 +82,7 @@
                                 <input type="password" placeholder="Sua senha" class="form-control">
                             </div>
                             <div>
-                                <button type="submit" class="btn btn-lg btn-block custom-cyan">Cadastre-se</button>
+                                <button type="submit" class="btn btn-lg btn-block ciano">Cadastre-se</button>
                             </div>
                         </form>
                         <p>
@@ -103,10 +103,32 @@
         </div>
     </section>
 
+    <!-- Menu lateral -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="disciplinas.html">Disciplinas</a></li>
+            <li><a href="planejamento.html">Planejamento</a></li>
+            <li><a href="revisoes.html">Revisões</a></li>
+            <li><a href="historico.html">Histórico</a></li>
+            <li><a href="estatisticas.html">Estatísticas</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
     <!-- jQuery, Popper.js e Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+            document.getElementById("overlay").classList.toggle("active");
+        }
+    </script>
 </body>
 
 </html>
