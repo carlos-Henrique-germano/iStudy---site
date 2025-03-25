@@ -1,0 +1,45 @@
+body {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background: #f2f2f2;
+}
+
+i {
+    color: black;
+    transition: color 0.3s ease-in-out;
+}
+
+i:hover {
+    color: #00BCD4;
+    transform: scale(1.2);
+}
+
+p {
+    font-size: 20px;
+}
+
+.navbar-ciano {
+    background-color: #00BCD4 !important;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #fff !important;
+}
+
+.navbar-nav .nav-link {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar-nav .btn {
+  font-size: 18px;
+}
+
+.custom-cyan {
+    background-color: #00bcd4;
+    color: white; 
+}
+
+.custom-cyan:hover {
+    background-color: #0097a7;
+    color: black;
+}
